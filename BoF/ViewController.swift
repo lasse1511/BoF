@@ -34,13 +34,24 @@ class ViewController: UIViewController {
     
     @IBAction func Click(_ sender: UIButton) {
         FrontView.alpha = 0.3
+        FrontView.backgroundColor = UIColor.lightGray
         JoinPopup.isHidden = false
     }
 
 
     @IBAction func CreateClick(_ sender: UIButton) {
         FrontView.alpha = 0.3
+        FrontView.backgroundColor = UIColor.lightGray
         MainPopUp.isHidden = false
+    }
+    
+    @IBAction func TranspButtonClick(_ sender: UIButton) {
+        /*FrontView.alpha = 1
+        FrontView.backgroundColor = UIColor.white
+        MainPopUp.isHidden = true
+        JoinPopup.isHidden = true*/
+        
+        //Add and remove it
     }
 }
 
