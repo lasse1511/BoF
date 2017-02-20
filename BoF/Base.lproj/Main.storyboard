@@ -172,6 +172,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="NextBtn" destination="lsd-i7-EqE" id="8nB-8J-HQE"/>
                         <outlet property="RoundsTable" destination="lKl-0i-l9B" id="0D5-GW-6x0"/>
                         <outlet property="TimePicker" destination="rfc-xO-ODK" id="Qk5-gg-BD7"/>
                     </connections>

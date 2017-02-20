@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
 
@@ -17,9 +18,10 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
     @IBOutlet weak var RoundsTable: UITableView!
     @IBOutlet weak var TimePicker: UIPickerView!
+    @IBOutlet weak var NextBtn: UIButton!
     
     var TimePickerData = [[0,1,2],[0,5,10,15,20,25,30,35,40,45,50,55]]
-
+    var labelTexts = ["Minutes","Second"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +31,10 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         self.TimePicker.delegate = self
         self.TimePicker.dataSource = self
         
-            
+
 
     }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
@@ -42,6 +45,8 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return String(TimePickerData[component][row])
     }
+    
+    
 
     
     /*
