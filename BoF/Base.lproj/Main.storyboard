@@ -116,6 +116,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Submit"/>
                                                 <connections>
+                                                    <action selector="Submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ISo-Pe-Leu"/>
                                                     <segue destination="fqU-A0-3cL" kind="presentation" id="KEM-hg-zGe"/>
                                                 </connections>
                                             </button>
@@ -129,9 +130,11 @@
                     </view>
                     <connections>
                         <outlet property="CreateBTN" destination="mmb-WK-p3w" id="Fth-AO-JEg"/>
+                        <outlet property="CreateName" destination="NKc-1x-05P" id="efI-VC-gHj"/>
                         <outlet property="CreatePopUp" destination="wkg-VZ-5So" id="lcR-b3-hKd"/>
                         <outlet property="FrontView" destination="tbM-D9-TUO" id="FxF-ua-LSb"/>
                         <outlet property="JoinBTN" destination="qhn-mw-2fV" id="eT4-DR-4zS"/>
+                        <outlet property="JoinName" destination="xzn-jq-sSd" id="ZaH-Pn-IN8"/>
                         <outlet property="JoinPopUp" destination="axD-RM-YyE" id="vow-fB-1A1"/>
                     </connections>
                 </viewController>
@@ -188,12 +191,24 @@
                     <view key="view" contentMode="scaleToFill" id="s7H-BH-qLC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The name of the game is: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIh-li-TK9">
+                                <rect key="frame" x="16" y="37" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="GamenameLBL" destination="UIh-li-TK9" id="VzM-ha-uzb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3TE-m1-Jkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889" y="-291"/>
+            <point key="canvasLocation" x="894" y="-292"/>
         </scene>
     </scenes>
 </document>

@@ -10,8 +10,14 @@ import UIKit
 
 class JoinViewController: UIViewController {
 
+    
+    let string = gameDTO.gameName
+
+    @IBOutlet var GamenameLBL: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        GamenameLBL.text = "The name of the game is: " + gameDTO.gameName
 
         // Do any additional setup after loading the view.
     }
@@ -21,7 +27,10 @@ class JoinViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

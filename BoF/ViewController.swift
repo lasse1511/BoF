@@ -10,9 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var gamename: String!
-    
-    
+    let string = gameDTO.gameName
     
     @IBOutlet var FrontView: UIView!
     @IBOutlet var CreatePopUp: UIView!
@@ -21,12 +19,14 @@ class ViewController: UIViewController {
     @IBOutlet var CreateBTN: UIButton!
     @IBOutlet var JoinBTN: UIButton!
     
+    @IBOutlet var CreateName: UITextField!
+    @IBOutlet var JoinName: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         CreatePopUp.isHidden = true
         JoinPopUp.isHidden = true
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,8 +49,6 @@ class ViewController: UIViewController {
         FrontView.backgroundColor = UIColor.lightGray
         CreatePopUp.isHidden = false
     }
-
-    
     
     @IBAction func CloseCreatePop(_ sender: UIButton) {
         
@@ -59,6 +57,18 @@ class ViewController: UIViewController {
         CreateBTN.isEnabled = true
         JoinBTN.isEnabled = true
     }
+    
+    @IBAction func Submit(_ sender: UIButton) {
+        if  (CreatePopUp.isHidden == false)
+        {
+            gameDTO.gameName = CreateName.text!
+        }
+        else if (JoinPopUp.isHidden == false)
+        {
+            gameDTO.gameName = JoinName.text!
+        }
+    }
+    
     
     
     
