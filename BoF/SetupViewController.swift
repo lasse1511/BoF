@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SetupViewController: UIViewController/*, UIPickerViewDelegate, UIPickerViewDataSource */{
 
     @IBOutlet weak var CDTimer: UIDatePicker!
     @IBOutlet weak var RoundsTable: UITableView!
