@@ -45,13 +45,21 @@ class ViewController: UIViewController {
         MainPopUp.isHidden = false
     }
     
-    @IBAction func TranspButtonClick(_ sender: UIButton) {
-        /*FrontView.alpha = 1
+    @IBAction func CreateCancelClick(_ sender: UIButton) {
+        
+        MainPopUp.alpha = 0
+        FrontView.alpha = 1
         FrontView.backgroundColor = UIColor.white
-        MainPopUp.isHidden = true
-        JoinPopup.isHidden = true*/
+ 
+        
+        
+        
+        //self.removeFromParentViewController()
+        //super.addChildViewController(self)
         
         //Add and remove it
     }
+    
+    
 }
 

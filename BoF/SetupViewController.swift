@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SetupViewController: UIViewController/*, UIPickerViewDelegate, UIPickerViewDataSource */{
 
     @IBOutlet weak var RoundsTable: UITableView!
     @IBOutlet weak var TimePicker: UIPickerView!
