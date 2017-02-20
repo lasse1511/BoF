@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func CreatePopUp(_ sender: UIButton) {
-        FrontView.alpha = 0.3
+        //FrontView.alpha = 0.3
         FrontView.backgroundColor = UIColor.lightGray
         CreatePopUp.isHidden = false
     }
@@ -49,11 +49,11 @@ class ViewController: UIViewController {
     @IBAction func CloseCreatePop(_ sender: UIButton) {
         
         CreatePopUp.isHidden = true
+        FrontView.backgroundColor = UIColor.white
         
         /*
          MainPopUp.alpha = 0
          FrontView.alpha = 1
-         FrontView.backgroundColor = UIColor.white
          */
         
         
