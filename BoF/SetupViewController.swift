@@ -9,7 +9,7 @@
 import UIKit
 
 
-class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource/*, UITableViewDelegate, UITableViewDataSource*/ {
 
 
 
@@ -21,7 +21,8 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var NextBtn: UIButton!
     
     var TimePickerData = [[0,1,2],[0,5,10,15,20,25,30,35,40,45,50,55]]
-    var labelTexts = ["Minutes","Second"]
+    var TableData = ["Free Speech","Mime","Oneword","Special"]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,23 +31,47 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         self.TimePicker.delegate = self
         self.TimePicker.dataSource = self
-        
-
-
+        //self.RoundsTable.delegate = self
+        //self.RoundsTable.dataSource = self
     }
     
+    //setup for RoundsTable
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return TableData.count
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    //setup for timepicker
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return TimePickerData[component].count
     }
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(TimePickerData[component][row])
+        if TimePickerData[component]==TimePickerData[0] {
+            return String(TimePickerData[component][row])+" min."
+        }
+        else{
+            return String(TimePickerData[component][row])+" sec."
+        }
     }
+
     
     
+
+    @IBAction func NextBtn(_ sender: UIButton) {
+        var time: [Int]=[Int]()
+        time[0]=TimePickerData[0][TimePicker.selectedRow(inComponent: 0)]
+        time[1]=TimePickerData[1][TimePicker.selectedRow(inComponent: 1)]
+        gameDTO.gameTime=time;
+        
+    }
 
     
     /*
