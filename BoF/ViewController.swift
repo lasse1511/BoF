@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     
     @IBAction func CreatePopUp(_ sender: UIButton) {
         //FrontView.alpha = 0.3
+        FrontView.isUserInteractionEnabled = false
         FrontView.backgroundColor = UIColor.lightGray
         CreatePopUp.isHidden = false
     }
