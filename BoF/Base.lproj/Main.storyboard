@@ -140,14 +140,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lHl-Fa-c5J">
-                                <rect key="frame" x="16" y="69" width="343" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="49u-3M-OPn" id="J1h-MD-GMR"/>
-                                    <outlet property="delegate" destination="49u-3M-OPn" id="xZu-Ma-Eh5"/>
-                                </connections>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsd-i7-EqE">
                                 <rect key="frame" x="164" y="594" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -158,12 +150,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="5" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7uf-Zm-5f7">
+                                <rect key="frame" x="0.0" y="80" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="509273292.023983">
+                                    <!--2017-02-20 08:48:12 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="CDTimer" destination="7uf-Zm-5f7" id="0zV-ul-7y8"/>
                         <outlet property="RoundsTable" destination="lKl-0i-l9B" id="0D5-GW-6x0"/>
-                        <outlet property="TimePicker" destination="lHl-Fa-c5J" id="IcJ-sA-yDC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARX-Ia-dan" userLabel="First Responder" sceneMemberID="firstResponder"/>

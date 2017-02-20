@@ -10,14 +10,23 @@ import UIKit
 
 class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var CDTimer: UIDatePicker!
     @IBOutlet weak var RoundsTable: UITableView!
     @IBOutlet weak var TimePicker: UIPickerView!
     
+    var TimePickerData: [[Int]] = [[Int]]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.TimePicker.delegate = self
+        self.TimePicker.dataSource = self
+        
+        
+        TimePickerData = [[0,1,2],[0,5,10,15,20,25,30,35,40,45,50,55]]
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +34,20 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
+    // The number of columns of data
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    // The number of rows of data
+    func UIPickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return TimePickerData.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    func UIPickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return TimePickerData[component][row]
+    }
 
     /*
     // MARK: - Navigation
