@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet var CreatePopUp: UIView!
     @IBOutlet var JoinPopUp: UIView!
     
+    @IBOutlet var CreateBTN: UIButton!
+    @IBOutlet var JoinBTN: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,7 +35,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func JoinPopUp(_ sender: UIButton) {
-        FrontView.alpha = 0.3
+        CreateBTN.isEnabled = false
+        JoinBTN.isEnabled = false
         FrontView.backgroundColor = UIColor.lightGray
         JoinPopUp.isHidden = false
     }
@@ -40,7 +44,8 @@ class ViewController: UIViewController {
     
     @IBAction func CreatePopUp(_ sender: UIButton) {
         //FrontView.alpha = 0.3
-        FrontView.isUserInteractionEnabled = false
+        CreateBTN.isEnabled = false
+        JoinBTN.isEnabled = false
         FrontView.backgroundColor = UIColor.lightGray
         CreatePopUp.isHidden = false
     }
@@ -51,19 +56,8 @@ class ViewController: UIViewController {
         
         CreatePopUp.isHidden = true
         FrontView.backgroundColor = UIColor.white
-        FrontView.isUserInteractionEnabled = true
-
-        /*
-         MainPopUp.alpha = 0
-         FrontView.alpha = 1
-         */
-        
-        
-        
-        //self.removeFromParentViewController()
-        //super.addChildViewController(self)
-        
-        //Add and remove it
+        CreateBTN.isEnabled = true
+        JoinBTN.isEnabled = true
     }
     
     

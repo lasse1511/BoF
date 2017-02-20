@@ -56,6 +56,9 @@
                                                 <rect key="frame" x="189" y="164" width="93" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Submit"/>
+                                                <connections>
+                                                    <segue destination="49u-3M-OPn" kind="presentation" id="A1z-bW-jzV"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Game name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NKc-1x-05P">
                                                 <rect key="frame" x="61" y="92" width="221" height="30"/>
@@ -86,14 +89,6 @@
                                         <rect key="frame" x="16" y="226" width="343" height="215"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6b5-ND-c2R">
-                                                <rect key="frame" x="61" y="164" width="221" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Submit"/>
-                                                <connections>
-                                                    <segue destination="fqU-A0-3cL" kind="presentation" id="sHt-80-Iam"/>
-                                                </connections>
-                                            </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Game name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzn-jq-sSd">
                                                 <rect key="frame" x="61" y="92" width="221" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -108,6 +103,22 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeE-IA-b9b">
+                                                <rect key="frame" x="61" y="157" width="93" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="CloseCreatePop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QwK-HZ-yMl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6b5-ND-c2R">
+                                                <rect key="frame" x="189" y="157" width="93" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Submit"/>
+                                                <connections>
+                                                    <segue destination="fqU-A0-3cL" kind="presentation" id="KEM-hg-zGe"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
@@ -117,8 +128,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="CreateBTN" destination="mmb-WK-p3w" id="Fth-AO-JEg"/>
                         <outlet property="CreatePopUp" destination="wkg-VZ-5So" id="lcR-b3-hKd"/>
                         <outlet property="FrontView" destination="tbM-D9-TUO" id="FxF-ua-LSb"/>
+                        <outlet property="JoinBTN" destination="qhn-mw-2fV" id="eT4-DR-4zS"/>
                         <outlet property="JoinPopUp" destination="axD-RM-YyE" id="vow-fB-1A1"/>
                     </connections>
                 </viewController>
