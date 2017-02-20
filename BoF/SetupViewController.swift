@@ -21,8 +21,8 @@ class SetupViewController: UIViewController/*, UIPickerViewDelegate, UIPickerVie
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.TimePicker.delegate = self
-        self.TimePicker.dataSource = self
+        //self.TimePicker.delegate = self
+        //self.TimePicker.dataSource = self
         
         
         TimePickerData = [[0,1,2],[0,5,10,15,20,25,30,35,40,45,50,55]]
@@ -44,11 +44,12 @@ class SetupViewController: UIViewController/*, UIPickerViewDelegate, UIPickerVie
         return TimePickerData.count
     }
     
-    // The data to return for the row and component (column) that's being passed in
+    /* The data to return for the row and component (column) that's being passed in
     func UIPickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return TimePickerData[component][row]
     }
 
+    */
     /*
     // MARK: - Navigation
 
