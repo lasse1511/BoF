@@ -51,7 +51,8 @@ class ViewController: UIViewController {
         
         CreatePopUp.isHidden = true
         FrontView.backgroundColor = UIColor.white
-        
+        FrontView.isUserInteractionEnabled = true
+
         /*
          MainPopUp.alpha = 0
          FrontView.alpha = 1
