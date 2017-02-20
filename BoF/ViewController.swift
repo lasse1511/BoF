@@ -47,10 +47,13 @@ class ViewController: UIViewController {
     
     @IBAction func CreateCancelClick(_ sender: UIButton) {
         
+        self.view.removeFromSuperview()
+        
+        /*
         MainPopUp.alpha = 0
         FrontView.alpha = 1
         FrontView.backgroundColor = UIColor.white
- 
+        */
         
         
         
