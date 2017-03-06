@@ -8,48 +8,80 @@
 
 import UIKit
 
-class SetupViewController: UIViewController/*, UIPickerViewDelegate, UIPickerViewDataSource */{
 
-    @IBOutlet weak var CDTimer: UIDatePicker!
+class SetupViewController:
+    UIViewController,
+    UIPickerViewDelegate,UIPickerViewDataSource, UITableViewDelegate,
+UITableViewDataSource {
+
     @IBOutlet weak var RoundsTable: UITableView!
     @IBOutlet weak var TimePicker: UIPickerView!
+    @IBOutlet weak var NextBtn: UIButton!
     
-    var TimePickerData: [[Int]] = [[Int]]()
+    var TimePickerData = [[0,1,2],[0,5,10,15,20,25,30,35,40,45,50,55]]
+    var TableData: [String] = ["Free Speech","Mime","Oneword","Special"]
+    
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        //self.TimePicker.delegate = self
-        //self.TimePicker.dataSource = self
-        
-        
-        TimePickerData = [[0,1,2],[0,5,10,15,20,25,30,35,40,45,50,55]]
+        view.addSubview(RoundsTable)
 
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        self.TimePicker.delegate = self
+        self.TimePicker.dataSource = self
+        self.RoundsTable.delegate = self
+        self.RoundsTable.dataSource = self
+        self.RoundsTable.reloadData()
     }
     
-    // The number of columns of data
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    @available(iOS 2.0, *)
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.TableData.count
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath,animated: true
+        )
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "ElementCell")
+        
+        // Adding the right informations
+        cell.textLabel?.text = TableData[indexPath.row]
+
+        return cell
+    }
+    
+    //setup for timepicker
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
-    
-    // The number of rows of data
-    func UIPickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return TimePickerData.count
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return TimePickerData[component].count
     }
-    
-    /* The data to return for the row and component (column) that's being passed in
-    func UIPickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return TimePickerData[component][row]
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if TimePickerData[component]==TimePickerData[0] {
+            return String(TimePickerData[component][row])+" min."
+        }
+        else{
+            return String(TimePickerData[component][row])+" sec."
+        }
     }
 
-    */
+    
+    
+
+    @IBAction func NextBtn(_ sender: UIButton) {
+        var time: [Int]=[Int]()
+        time[0]=TimePickerData[0][TimePicker.selectedRow(inComponent: 0)]
+        time[1]=TimePickerData[1][TimePicker.selectedRow(inComponent: 1)]
+        gameDTO.gameTime=time;
+        
+    }
+
+    
     /*
     // MARK: - Navigation
 
