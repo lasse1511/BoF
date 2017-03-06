@@ -9,41 +9,49 @@
 import UIKit
 
 
-class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource/*, UITableViewDelegate, UITableViewDataSource*/ {
-
-
-
-
-
+class SetupViewController:
+    UIViewController,
+    UIPickerViewDelegate,UIPickerViewDataSource, UITableViewDelegate,
+UITableViewDataSource {
 
     @IBOutlet weak var RoundsTable: UITableView!
     @IBOutlet weak var TimePicker: UIPickerView!
     @IBOutlet weak var NextBtn: UIButton!
     
     var TimePickerData = [[0,1,2],[0,5,10,15,20,25,30,35,40,45,50,55]]
-    var TableData = ["Free Speech","Mime","Oneword","Special"]
+    var TableData: [String] = ["Free Speech","Mime","Oneword","Special"]
+    
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.addSubview(RoundsTable)
+
         
         self.TimePicker.delegate = self
         self.TimePicker.dataSource = self
-        //self.RoundsTable.delegate = self
-        //self.RoundsTable.dataSource = self
+        self.RoundsTable.delegate = self
+        self.RoundsTable.dataSource = self
+        self.RoundsTable.reloadData()
     }
     
-    //setup for RoundsTable
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return TableData.count
+    @available(iOS 2.0, *)
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.TableData.count
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        
+        tableView.deselectRow(at: indexPath,animated: true
+        )
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "ElementCell")
+        
+        // Adding the right informations
+        cell.textLabel?.text = TableData[indexPath.row]
+
+        return cell
     }
     
     //setup for timepicker
