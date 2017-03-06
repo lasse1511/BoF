@@ -12,5 +12,6 @@ import Foundation
 struct gameDTO {
     static var gameName = ""
     static var isCreator = false
+    static var gameTime: [Int] = [Int]()
     
 }

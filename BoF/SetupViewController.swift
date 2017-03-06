@@ -69,18 +69,17 @@ UITableViewDataSource {
             return String(TimePickerData[component][row])+" sec."
         }
     }
-
-    
     
 
-    @IBAction func NextBtn(_ sender: UIButton) {
+
+    @IBAction func NextBTNPress(_ sender: UIButton) {
         var time: [Int]=[Int]()
-        time[0]=TimePickerData[0][TimePicker.selectedRow(inComponent: 0)]
-        time[1]=TimePickerData[1][TimePicker.selectedRow(inComponent: 1)]
-        gameDTO.gameTime=time;
         
+        time.insert(Int(TimePicker.selectedRow(inComponent: 0).toIntMax()), at: 0)
+        time.insert(Int(TimePicker.selectedRow(inComponent: 1).toIntMax()*5), at: 1)
+        gameDTO.gameTime = time
+        gameDTO.isCreator = true
     }
-
     
     /*
     // MARK: - Navigation

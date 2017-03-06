@@ -12,7 +12,7 @@ class JoinViewController: UIViewController {
 
     
     let string = gameDTO.gameName
-    let isCreator = gameDTO.isCreator
+    var isCreator = gameDTO.isCreator
     
 
     @IBOutlet var NextBTN: UIButton!
