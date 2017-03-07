@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         else if (JoinPopUp.isHidden == false)
         {
             gameDTO.gameName = JoinName.text!
+            gameDTO.isCreator = true
         }
     }
     

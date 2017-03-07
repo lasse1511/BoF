@@ -17,6 +17,8 @@
 		2A85437A1E57192D00543B58 /* BoFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8543791E57192D00543B58 /* BoFUITests.swift */; };
 		2A8543881E57273800543B58 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8543871E57273800543B58 /* JoinViewController.swift */; };
 		2A85438A1E57289500543B58 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8543891E57289500543B58 /* SetupViewController.swift */; };
+		2A9FC14F1E6D5A270035FE68 /* BetweenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FC14E1E6D5A270035FE68 /* BetweenViewController.swift */; };
+		2A9FC1511E6D621A0035FE68 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FC1501E6D621A0035FE68 /* PlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		2A85437B1E57192D00543B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A8543871E57273800543B58 /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		2A8543891E57289500543B58 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		2A9FC14E1E6D5A270035FE68 /* BetweenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetweenViewController.swift; sourceTree = "<group>"; };
+		2A9FC1501E6D621A0035FE68 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				2A8543621E57192D00543B58 /* LaunchScreen.storyboard */,
 				2A8543651E57192D00543B58 /* Info.plist */,
 				2A8036ED1E5AFA6D0027C181 /* DTO.swift */,
+				2A9FC14E1E6D5A270035FE68 /* BetweenViewController.swift */,
+				2A9FC1501E6D621A0035FE68 /* PlayViewController.swift */,
 			);
 			path = BoF;
 			sourceTree = "<group>";
@@ -273,6 +279,8 @@
 				2A8543881E57273800543B58 /* JoinViewController.swift in Sources */,
 				2A85435A1E57192D00543B58 /* AppDelegate.swift in Sources */,
 				2A8036EE1E5AFA6D0027C181 /* DTO.swift in Sources */,
+				2A9FC1511E6D621A0035FE68 /* PlayViewController.swift in Sources */,
+				2A9FC14F1E6D5A270035FE68 /* BetweenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
