@@ -20,6 +20,7 @@ UITableViewDataSource {
     
     var TimePickerData = [[0,1,2],[0,5,10,15,20,25,30,35,40,45,50,55]]
     var TableData: [String] = ["Free Speech","Mime","Oneword","Special"]
+    var Checkmark: [Bool] = [true,true,true,false]
     
 
 
@@ -33,7 +34,7 @@ UITableViewDataSource {
         self.TimePicker.dataSource = self
         self.RoundsTable.delegate = self
         self.RoundsTable.dataSource = self
-        self.RoundsTable.reloadData()
+
     }
     
     @available(iOS 2.0, *)
@@ -41,12 +42,23 @@ UITableViewDataSource {
         return self.TableData.count
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        tableView.deselectRow(at: indexPath,animated: true
-        )
+        if (self.Checkmark[indexPath.row]==true) {
+            self.RoundsTable.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            self.Checkmark[indexPath.row]=false
+        }
+        else
+        {
+         self.RoundsTable.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+            self.Checkmark[indexPath.row]=false
     }
+    }
+
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "ElementCell")
+        if (3>indexPath.row) {
+            cell.accessoryType = UITableViewCellAccessoryType.checkmark
+        }
         
         // Adding the right informations
         cell.textLabel?.text = TableData[indexPath.row]
