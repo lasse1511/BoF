@@ -14,12 +14,6 @@ class PlayViewController: UIViewController {
     
     var count = gameDTO.gameTime
     
-    let alert = UIAlertController(title: "Round over", message: "Round over - hand over the phone to the next team", preferredStyle: UIAlertControllerStyle.alert)
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         countDownLabel.text = ("Tid: \(count[0]) : \(count[1]) seconds")
@@ -34,27 +28,15 @@ class PlayViewController: UIViewController {
     
     func updateCounter() {
         //you code, this is an example
-        if count[0] >= 0 && count[1] >= 10 {
+        if count[0] > 0 && count[1] > 0 {
             countDownLabel.text = ("Tid: \(count[0]) : \(count[1]) seconds")
-            count[1] -= 1
-        }
-            
-        else if count[0] >= 0 && count[1] > 0 && count[1] < 10 {
-            countDownLabel.text = ("Tid: \(count[0]) : 0\(count[1]) seconds")
             count[1] -= 1
         }
         
         else if count[0]>0 && count[1] == 0 {
-            countDownLabel.text = ("Tid: \(count[0]) : 0\(count[1]) seconds")
+            countDownLabel.text = ("Tid: \(count[0]) : \(count[1]) seconds")
             count[1] = 59
             count[0] -= 1
-        }
-            
-        else {
-            countDownLabel.text = ("Tid: 0\(count[0]) : 0\(count[1]) seconds")
-            self.present(alert, animated: true, completion: nil)
-            
-            
         }
     }
         

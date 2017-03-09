@@ -17,6 +17,7 @@ UITableViewDataSource {
     @IBOutlet weak var RoundsTable: UITableView!
     @IBOutlet weak var TimePicker: UIPickerView!
     @IBOutlet weak var NextBtn: UIButton!
+    @IBOutlet weak var specialText: UITextField!
     
     var TimePickerData = [[0,1,2],[0,5,10,15,20,25,30,35,40,45,50,55]]
     var TableData: [String] = ["Free Speech","Mime","Oneword","Special"]
@@ -49,7 +50,7 @@ UITableViewDataSource {
         else
         {
          self.RoundsTable.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
-            self.Checkmark[indexPath.row]=false
+            self.Checkmark[indexPath.row]=true
     }
     }
 
@@ -89,6 +90,12 @@ UITableViewDataSource {
         
         time.insert(Int(TimePicker.selectedRow(inComponent: 0).toIntMax()), at: 0)
         time.insert(Int(TimePicker.selectedRow(inComponent: 1).toIntMax()*5), at: 1)
+        
+        if Checkmark[3] == false {
+            gameDTO.specialRound = self.specialText.text!
+        }
+        
+        gameDTO.gameRounds.append(contentsOf: Checkmark)
         gameDTO.gameTime = time
         gameDTO.isCreator = true
     }

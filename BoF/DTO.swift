@@ -13,5 +13,7 @@ struct gameDTO {
     static var gameName = ""
     static var isCreator = false
     static var gameTime: [Int] = [Int]()
+    static var gameRounds: [Bool]=[Bool]()
+    static var specialRound = ""
     
 }
