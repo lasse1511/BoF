@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BDB4BEF1E72C6540040D190 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB4BEE1E72C6540040D190 /* Firebase.swift */; };
+		1BDB4BF11E72C8040040D190 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDB4BF01E72C8040040D190 /* FirebaseAnalytics.framework */; };
+		1BDB4BF31E72C80B0040D190 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDB4BF21E72C80B0040D190 /* FirebaseCore.framework */; };
+		1BDB4BF51E72C8140040D190 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDB4BF41E72C8140040D190 /* FirebaseInstanceID.framework */; };
+		1BDB4BF71E72C8180040D190 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDB4BF61E72C8180040D190 /* GoogleToolboxForMac.framework */; };
+		1BE4B6991E7182B800094D2E /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE4B6981E7182B800094D2E /* FirebaseDatabase.framework */; };
 		2A8036EE1E5AFA6D0027C181 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8036ED1E5AFA6D0027C181 /* DTO.swift */; };
 		2A85435A1E57192D00543B58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8543591E57192D00543B58 /* AppDelegate.swift */; };
 		2A85435C1E57192D00543B58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85435B1E57192D00543B58 /* ViewController.swift */; };
@@ -39,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BDB4BEE1E72C6540040D190 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		1BDB4BF01E72C8040040D190 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Analytics/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		1BDB4BF21E72C80B0040D190 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Analytics/FirebaseCore.framework; sourceTree = "<group>"; };
+		1BDB4BF41E72C8140040D190 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Analytics/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		1BDB4BF61E72C8180040D190 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = Analytics/GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		1BE4B6981E7182B800094D2E /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
+		1BE4B69C1E71866600094D2E /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		1BE4B69D1E71868300094D2E /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		2A8036ED1E5AFA6D0027C181 /* DTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		2A8543561E57192D00543B58 /* BoF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8543591E57192D00543B58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BDB4BF11E72C8040040D190 /* FirebaseAnalytics.framework in Frameworks */,
+				1BE4B6991E7182B800094D2E /* FirebaseDatabase.framework in Frameworks */,
+				1BDB4BF31E72C80B0040D190 /* FirebaseCore.framework in Frameworks */,
+				1BDB4BF51E72C8140040D190 /* FirebaseInstanceID.framework in Frameworks */,
+				1BDB4BF71E72C8180040D190 /* GoogleToolboxForMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +135,16 @@
 				2A8543621E57192D00543B58 /* LaunchScreen.storyboard */,
 				2A8543651E57192D00543B58 /* Info.plist */,
 				2A8036ED1E5AFA6D0027C181 /* DTO.swift */,
+				1BDB4BEE1E72C6540040D190 /* Firebase.swift */,
 				2A9FC14E1E6D5A270035FE68 /* BetweenViewController.swift */,
 				2A9FC1501E6D621A0035FE68 /* PlayViewController.swift */,
+				1BE4B69C1E71866600094D2E /* Firebase.h */,
+				1BE4B69D1E71868300094D2E /* module.modulemap */,
+				1BDB4BF61E72C8180040D190 /* GoogleToolboxForMac.framework */,
+				1BDB4BF41E72C8140040D190 /* FirebaseInstanceID.framework */,
+				1BDB4BF21E72C80B0040D190 /* FirebaseCore.framework */,
+				1BDB4BF01E72C8040040D190 /* FirebaseAnalytics.framework */,
+				1BE4B6981E7182B800094D2E /* FirebaseDatabase.framework */,
 			);
 			path = BoF;
 			sourceTree = "<group>";
@@ -276,6 +303,7 @@
 			files = (
 				2A85438A1E57289500543B58 /* SetupViewController.swift in Sources */,
 				2A85435C1E57192D00543B58 /* ViewController.swift in Sources */,
+				1BDB4BEF1E72C6540040D190 /* Firebase.swift in Sources */,
 				2A8543881E57273800543B58 /* JoinViewController.swift in Sources */,
 				2A85435A1E57192D00543B58 /* AppDelegate.swift in Sources */,
 				2A8036EE1E5AFA6D0027C181 /* DTO.swift in Sources */,
@@ -432,8 +460,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BoF",
+					"$(PROJECT_DIR)/BoF/Analytics",
+				);
 				INFOPLIST_FILE = BoF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-Obj-C";
 				PRODUCT_BUNDLE_IDENTIFIER = BonBuhl.BoF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -444,8 +478,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BoF",
+					"$(PROJECT_DIR)/BoF/Analytics",
+				);
 				INFOPLIST_FILE = BoF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-Obj-C";
 				PRODUCT_BUNDLE_IDENTIFIER = BonBuhl.BoF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

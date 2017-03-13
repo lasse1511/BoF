@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewController: UIViewController {
 
+    var ref: FIRDatabaseReference!
     let string = gameDTO.gameName
     
     @IBOutlet var FrontView: UIView!
@@ -27,6 +29,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         CreatePopUp.isHidden = true
         JoinPopUp.isHidden = true
+        
+        self.ref = FIRDatabase.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,16 +61,18 @@ class ViewController: UIViewController {
         CreateBTN.isEnabled = true
         JoinBTN.isEnabled = true
     }
-    
+
     @IBAction func Submit(_ sender: UIButton) {
         if  (CreatePopUp.isHidden == false)
         {
             gameDTO.gameName = CreateName.text!
+            
         }
         else if (JoinPopUp.isHidden == false)
         {
             gameDTO.gameName = JoinName.text!
             gameDTO.isCreator = true
+            self.ref.child(gameDTO.gameName).setValue("False3401")
         }
     }
     

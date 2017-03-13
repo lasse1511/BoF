@@ -250,6 +250,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="CreateGame:" destination="fqU-A0-3cL" eventType="touchUpInside" id="wMz-lf-PW3"/>
                                     <segue destination="dR1-QA-GaT" kind="presentation" id="oxO-3D-Ulj"/>
                                 </connections>
                             </button>
